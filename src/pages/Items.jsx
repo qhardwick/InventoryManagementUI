@@ -42,7 +42,7 @@ export default function Items() {
 
     return(
         <>
-            <ItemTable itemData={items} onDelete={handleDelete} />
+            <ItemTable items={items} setItems={setItems} onDelete={handleDelete} />
         </>
     );
 }
