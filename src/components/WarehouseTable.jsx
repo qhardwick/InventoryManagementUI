@@ -81,7 +81,7 @@ export default function WarehouseTable({ warehouseData, onDelete }) {
                                     </Link>
                                 </td>
                                 <td>
-                                    <button onClick={() => onDelete(warehouse.id)} className="btn-icon">
+                                    <button id={`delete-${warehouse.name}`} onClick={() => onDelete(warehouse.id)} className="btn-icon">
                                         <FontAwesomeIcon icon={faTrash} className="btn-icon" />
                                     </button>
                                 </td>
