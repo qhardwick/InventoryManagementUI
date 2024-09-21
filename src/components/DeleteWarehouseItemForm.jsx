@@ -49,7 +49,7 @@ export default function AddWarehouseItemForm({warehouseItems, setIsDeletingItem,
                 <table className="table table-striped table-bordered table-hover" style={{ width: '40%', fontSize: '1.2em' }}>
                     <thead>
                         <tr>
-                            <th colSpan={5}>Items</th>
+                            <th colSpan={6}>Items</th>
                         </tr>
                         <tr>
                             <th style={{ width:'10%' }}>Part Number</th>

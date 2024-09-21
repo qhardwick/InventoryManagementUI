@@ -130,7 +130,7 @@ export default function WarehouseItemTable({ warehouseItems, warehouseId, setWar
 
     return (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-            <table style={{ width: '40%', fontSize: '1.2em' }}>
+            <table id='warehouse-items-table' style={{ width: '40%', fontSize: '1.2em' }}>
             <thead>
                     <tr>
                         <th colSpan={7}>{warehouse.name} ({warehouse.location})</th>
