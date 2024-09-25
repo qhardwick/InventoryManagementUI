@@ -12,7 +12,7 @@ export default function WarehouseItemTable({ warehouseItems, warehouseId, setWar
     const [isDeletingItem, setIsDeletingItem] = useState(false);
 
     const updateTable = () => {
-        fetch(`http://localhost:8080/inventory/warehouses/${warehouseId}/items`)
+        fetch(`http://3.95.37.62:8080/inventory/warehouses/${warehouseId}/items`)
             .then(response => response.json())
             .then(data => setWarehouseItems(data))
             .catch(error => console.error('Error:', error));
@@ -23,7 +23,7 @@ export default function WarehouseItemTable({ warehouseItems, warehouseId, setWar
     }, [warehouseId]);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/inventory/warehouses/${warehouseId}`)
+        fetch(`http://3.95.37.62:8080/inventory/warehouses/${warehouseId}`)
             .then(response => {
                 if (!response.ok) {
                     return response.json().then(err => {
@@ -46,7 +46,7 @@ export default function WarehouseItemTable({ warehouseItems, warehouseId, setWar
     }, [warehouseId]);
 
     useEffect(() => {
-        fetch(`http://localhost:8080/inventory/warehouses/${warehouseId}/items/capacity`)
+        fetch(`http://3.95.37.62:8080/inventory/warehouses/${warehouseId}/items/capacity`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch remaining capacity');
@@ -72,7 +72,7 @@ export default function WarehouseItemTable({ warehouseItems, warehouseId, setWar
     };
 
     const addIncrement = (warehouseItem) => {
-        fetch(`http://localhost:8080/inventory/warehouses/${warehouseId}/items?itemId=${warehouseItem.item.id}&quantity=1`, {
+        fetch(`http://3.95.37.62:8080/inventory/warehouses/${warehouseId}/items?itemId=${warehouseItem.item.id}&quantity=1`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ export default function WarehouseItemTable({ warehouseItems, warehouseId, setWar
     };
 
     const addDecrement = (warehouseItem) => {
-        fetch(`http://localhost:8080/inventory/warehouses/${warehouseId}/items?itemId=${warehouseItem.item.id}&quantity=1`, {
+        fetch(`http://3.95.37.62:8080/inventory/warehouses/${warehouseId}/items?itemId=${warehouseItem.item.id}&quantity=1`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 export default function Items() {
 
     //url for directors endpoint server
-    const url = 'http://localhost:8080/inventory/items';
+    const url = 'http://3.95.37.62:8080/inventory/items';
 
     //our list of Items
     const [items, setItems] = useState([])
@@ -27,7 +27,7 @@ export default function Items() {
     // Function to handle item deletion
     const handleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:8080/inventory/items/${id}`, {
+            const response = await fetch(`http://3.95.37.62:8080/inventory/items/${id}`, {
                 method: 'DELETE'
             });
             if (!response.ok) {

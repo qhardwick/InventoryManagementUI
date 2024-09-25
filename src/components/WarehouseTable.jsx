@@ -23,7 +23,7 @@ export default function WarehouseTable({ warehouseData, onDelete }) {
     };
 
     const handleSubmit = () => {
-        fetch('http://localhost:8080/inventory/warehouses', {
+        fetch('http://3.95.37.62:8080/inventory/warehouses', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

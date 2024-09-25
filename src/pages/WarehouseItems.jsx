@@ -7,7 +7,7 @@ export default function WarehousesItems() {
     let warehouseId = useParams().id;
 
     //url for directors endpoint server
-    const url = `http://localhost:8080/inventory/warehouses/${warehouseId}/items`;
+    const url = `http://3.95.37.62:8080/inventory/warehouses/${warehouseId}/items`;
 
     //our list of Warehouses
     const [warehouseItems, setWarehouseItems] = useState([])
