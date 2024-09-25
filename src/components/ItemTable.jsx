@@ -27,7 +27,7 @@ export default function ItemTable({ items, setItems, onDelete }) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:8080/inventory/items', {
+        fetch('http://3.95.37.62:8080/inventory/items', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

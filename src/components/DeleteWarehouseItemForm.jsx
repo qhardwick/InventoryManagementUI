@@ -17,7 +17,7 @@ export default function AddWarehouseItemForm({warehouseItems, setIsDeletingItem,
         const itemQuantity = quantities[itemId];
         if (itemQuantity) {
             console.log(warehouseItems)
-            fetch(`http://localhost:8080/inventory/warehouses/${warehouseItems[0].warehouse.id}/items?itemId=${itemId}&quantity=${itemQuantity}`, {
+            fetch(`http://3.95.37.62:8080/inventory/warehouses/${warehouseItems[0].warehouse.id}/items?itemId=${itemId}&quantity=${itemQuantity}`, {
                 method: 'DELETE',
             })
             .then(response => {

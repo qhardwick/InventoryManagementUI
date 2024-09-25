@@ -5,7 +5,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 export default function AddWarehouseItemForm({warehouseId, setIsAddingItem, updateTable}) {
 
     //url for directors endpoint server
-    const itemsUrl = 'http://localhost:8080/inventory/items';
+    const itemsUrl = 'http://3.95.37.62:8080/inventory/items';
 
     //our list of Items
     const [items, setItems] = useState([])
@@ -39,7 +39,7 @@ export default function AddWarehouseItemForm({warehouseId, setIsAddingItem, upda
         event.preventDefault();
         const itemQuantity = quantities[itemId];
         if (itemQuantity) {
-            fetch(`http://localhost:8080/inventory/warehouses/${warehouseId}/items?itemId=${itemId}&quantity=${itemQuantity}`, {
+            fetch(`http://3.95.37.62:8080/inventory/warehouses/${warehouseId}/items?itemId=${itemId}&quantity=${itemQuantity}`, {
                 method: 'POST',
             })
             .then(response => {

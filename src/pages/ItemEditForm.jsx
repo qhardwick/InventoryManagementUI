@@ -11,7 +11,7 @@ export default function ItemEditForm() {
 
     // Fetch warehouse data from backend API
     useEffect(() => {
-        fetch(`http://localhost:8080/inventory/items/${itemId}`)
+        fetch(`http://3.95.37.62:8080/inventory/items/${itemId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch item data');
@@ -34,7 +34,7 @@ export default function ItemEditForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch(`http://localhost:8080/inventory/items/${itemId}`, {
+        fetch(`http://3.95.37.62:8080/inventory/items/${itemId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
