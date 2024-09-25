@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="home-container">
-        <h1>Hello Worlddddd</h1>
+        <h1>Hello Worlddd</h1>
       <div className="landing-button">
         <Link className="landing-link" to={'/warehouses'}>Warehouse Manager</Link>
       </div>
