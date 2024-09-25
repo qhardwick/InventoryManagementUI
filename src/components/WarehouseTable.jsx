@@ -71,12 +71,12 @@ export default function WarehouseTable({ warehouseData, onDelete }) {
                                 <td>{warehouse.location}</td>
                                 <td>{warehouse.capacity}</td>
                                 <td>
-                                    <Link to={`/warehouses/${warehouse.id}/items`}>
+                                    <Link id={`inspect-${warehouse.name}`} to={`/warehouses/${warehouse.id}/items`}>
                                         <FontAwesomeIcon icon={faSearch} className="text-primary" />
                                     </Link>
                                 </td>
                                 <td>
-                                    <Link to={`/warehouses/${warehouse.id}`}>
+                                    <Link id={`edit-${warehouse.name}`} to={`/warehouses/${warehouse.id}`}>
                                         <FontAwesomeIcon icon={faEdit} className="btn-icon" />
                                     </Link>
                                 </td>
