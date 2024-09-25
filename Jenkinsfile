@@ -1,7 +1,6 @@
 pipeline {
     agent any
     environment {
-//         DOCKERHUB_CREDENTIALS = credentials('54321')
         FRONTEND_EC2_IP = '52.90.145.230'
     }
     stages {
@@ -20,9 +19,11 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', , 'tylercausey', 'dckr_pat_wqSj0-F1Eo32rfpUwNIhh_BTgy8') {
-                        dockerImage.push('latest')
-                    }
+                    // Manually login to Docker Hub using shell command
+                    sh 'docker login -u tylercausey -p dckr_pat_wqSj0-F1Eo32rfpUwNIhh_BTgy8'
+
+                    // Push the Docker image
+                    dockerImage.push('latest')
                 }
             }
         }
