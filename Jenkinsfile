@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('54321')
+//         DOCKERHUB_CREDENTIALS = credentials('54321')
         FRONTEND_EC2_IP = '52.90.145.230'
     }
     stages {
@@ -20,7 +20,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
+                    docker.withRegistry('https://index.docker.io/v1/', , 'tylercausey', 'dckr_pat_wqSj0-F1Eo32rfpUwNIhh_BTgy8') {
                         dockerImage.push('latest')
                     }
                 }
