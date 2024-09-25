@@ -170,7 +170,7 @@ export default function WarehouseItemTable({ warehouseItems, warehouseId, setWar
                     <tr>
                         <td colSpan={4}></td>
                         <td colSpan={2}>Capacity:</td>
-                        <td colSpan={1} style={{
+                        <td id='capacity' colSpan={1} style={{
                             color: remainingCapacity/warehouse.capacity <= 0.2 ? 'red' :
                                 remainingCapacity/warehouse.capacity <= 0.5 ? 'orange' : 'black'
                         }}>

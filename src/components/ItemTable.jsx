@@ -80,7 +80,7 @@ export default function ItemTable({ items, setItems, onDelete }) {
                                 </Link>
                             </td>
                             <td>
-                                <button onClick={() => onDelete(item.id)} className="btn-icon">
+                                <button id={`delete-${item.name}`} onClick={() => onDelete(item.id)} className="btn-icon">
                                     <FontAwesomeIcon icon={faTrash} className="btn-icon" />
                                 </button>
                             </td>
