@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CREDENTIALS = credentials('54321')
-        FRONTEND_EC2_IP = '54.226.216.9'
+        FRONTEND_EC2_IP = '52.90.145.230'
     }
     stages {
         stage('Checkout') {

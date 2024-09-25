@@ -6,6 +6,7 @@ WORKDIR /app
 
 # copy our package.json (and package-lock.json if available) to /app
 COPY package.json package-lock.json* ./
+RUN npm install -g vite
 
 # install our packages
 RUN npm install
